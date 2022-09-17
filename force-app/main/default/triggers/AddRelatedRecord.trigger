@@ -24,3 +24,6 @@ trigger AddRelatedRecord on Account(after insert, after update) {
     }
 
 }
+
+// Account c = new Account(Name='Test Contact');
+// insert c;
