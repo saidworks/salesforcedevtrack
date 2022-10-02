@@ -1,0 +1,9 @@
+<apex:page showHeader="false">
+    <apex:pageBlock>
+        <apex:pageBlockSection>
+            <h1>Hi {! $User.FirstName}, {! $User.LastName }</h1>
+            Your username is : {! $User.UserName } 
+
+        </apex:pageBlockSection>
+    </apex:pageBlock>
+</apex:page>

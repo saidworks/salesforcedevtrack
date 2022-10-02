@@ -1,0 +1,27 @@
+<apex:page standardController="Account" recordSetVar="Accounts">
+    <apex:sectionHeader>
+        <h1>Related lists of An account</h1>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css" />
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    </apex:sectionHeader>
+    <apex:pageBlock title="Accounts"> 
+        <apex:repeat value="{! Accounts }" var="a">
+            <li class="list-group-item">
+                <apex:outputLink value="/{! a.Id }">
+                    {! a.Name}
+                </apex:outputLink>
+            </li>    
+        </apex:repeat>
+    </apex:pageBlock>       
+</apex:page>
+
+<!-- <apex:page standardController="Account" recordSetVar="accounts">
+	<apex:pageBlock title="Accounts">
+		<apex:repeat value="{!Accounts}" var="a">
+			<li>
+				<apex:outputLink value="/{!a.id}">{!a.Name}</apex:outputLink>
+			</li>
+		</apex:repeat>
+	</apex:pageBlock> 
+</apex:page> -->

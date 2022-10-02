@@ -1,0 +1,5 @@
+<apex:page sidebar="true" showHeader="false">
+<h1>DisplayImage</h1>
+<apex:pageBlockSection><apex:image alt="This a salesforce logo" value="https://developer.salesforce.com/files/salesforce-developer-network-logo.png"></apex:image></apex:pageBlockSection>
+
+</apex:page>
