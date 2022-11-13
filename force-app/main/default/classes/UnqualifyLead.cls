@@ -7,8 +7,8 @@ public with sharing class UnqualifyLead {
         Date expiring = today - 90;
         List<Lead> unqualified = new List<Lead>();
         
-        for(Lead l:[SELECT LastTransferDate,Status FROM Lead WHERE Status != 'Unqualified' AND (LastTransferDate > :expiring) ]){
-            l.status = 'Unqualified';
+        for(Lead l:[SELECT LastTransferDate,Status FROM Lead WHERE Status != 'Closed - Not Converted' AND (LastTransferDate > :expiring) ]){
+            l.status = 'Closed - Not Converted';
             unqualified.add(l); 
         }
         update unqualified;
